@@ -94,7 +94,7 @@
             <full-page :options="options" @after-load="afterLoad" id="fullpage">
                 <div class="section section-1">
                     <div class="section__content">
-                        <div class="">
+                        <div>
                             <img class="section__image section__image-left" src="./assets/zych1.jpg">
                         </div>
                         <div class="section__content__text">
@@ -127,35 +127,32 @@
                         potrzeb
                     </div>
                     <div class="section__content">
-                        <div style="margin: 24px auto; display: flex">
+                        <div class="section__content__text">
                             <div>
-                                <div style="display: flex; align-items: center; height: 40px; margin-bottom: 10px">
-                                    <i class="iconflat icon-stationary-bike" style="position: relative; top: 0px"></i>
+                                <div class="section__content__element">
+                                    <i class="iconflat icon-stationary-bike"></i>
                                     <div>Redukcja tkanki tłuszczowej</div>
                                 </div>
-                                <div style="display: flex; align-items: center; height: 40px; margin-bottom: 10px">
-                                    <i class="iconflat icon-dumbbell" style="position: relative; top: 8px"></i>
+                                <div class="section__content__element">
+                                    <i class="iconflat icon-dumbbell"></i>
                                     <div>Budowa tkanki mięśniowej</div>
                                 </div>
-                                <div style="display: flex; align-items: center; height: 40px; margin-bottom: 10px">
-                                    <i class="iconflat icon-treadmill" style="position: relative; top: 3px"></i>
+                                <div class="section__content__element">
+                                    <i class="iconflat icon-treadmill"></i>
                                     <div>Trening motoryczny</div>
                                 </div>
                             </div>
-                            <div style="margin-left: 32px">
-                                <div style="display: flex; align-items: center; height: 40px; margin-bottom: 10px">
-                                    <i class="iconflat icon-isotonic"
-                                       style="position: relative; top: 1px; left: 6px"></i>
+                            <div>
+                                <div class="section__content__element">
+                                    <i class="iconflat icon-isotonic"></i>
                                     <div>Trening wytrzymałościowy</div>
                                 </div>
-                                <div style="display: flex; align-items: center; height: 40px; margin-bottom: 10px">
-                                    <i class="iconflat icon-kettlebell"
-                                       style="position: relative; top: 1px; left: 4px"></i>
+                                <div class="section__content__element">
+                                    <i class="iconflat icon-kettlebell"></i>
                                     <div>Trening korekcyjny (wady postawy)</div>
                                 </div>
-                                <div style="display: flex; align-items: center; height: 40px; margin-bottom: 10px">
-                                    <i class="iconflat icon-stopwatch"
-                                       style="position: relative; top: 1px; left: 2px"></i>
+                                <div class="section__content__element">
+                                    <i class="iconflat icon-stopwatch"></i>
                                     <div>Przygotowanie do rożnego typu zawodów sportowych</div>
                                 </div>
                             </div>
@@ -203,78 +200,73 @@
                     </div>
                 </div>
                 <div class="section section-4">
-                    <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="section__content">
                         <div class="section__header section__header-center">Moją wizytówką są zadowoleni klienci</div>
-                        <div class="section__slider"
-                             style="width: 80%; color: #ffffff; display: flex; align-items: center">
-                            <div class="section__slider__button-left"
-                                 style="width: 0; height: 0; border-top: 40px solid transparent; border-bottom: 40px solid transparent; border-right: 40px solid #ffffff"></div>
-                            <div class="section__slider__content" style="display: flex; margin: 0 72px">
-                                <div class="section__slider__content__quotes-left" style="font-size: 100px">&bdquo;
+                        <div class="section__slider">
+                            <div class="section__slider__button section__slider__button-left"></div>
+                            <div class="section__slider__content">
+                                <div class="section__slider__content__quotes">&bdquo;
                                 </div>
-                                <div class="section__slider__content__text"
-                                     style="display: flex; align-items: center; justify-content: center; text-align: justify; padding: 24px; font-size: 22px">
+                                <div class="section__slider__content__text">
                                     Treningi z Pawłem to zawsze świetna zabawa. Są ciężkie, ale on umie mnie odpowiednio
                                     zmotywować. Pierwsze efekty były widoczne bardzo szybko.
                                 </div>
-                                <div class="section__slider__content__quotes-left" style="font-size: 100px">&ldquo;
+                                <div class="section__slider__content__quotes">&ldquo;
                                 </div>
                             </div>
-                            <div class="section__slider__button-right"
-                                 style="width: 0; height: 0; border-top: 40px solid transparent; border-bottom: 40px solid transparent; border-left: 40px solid #ffffff"></div>
+                            <div class="section__slider__button section__slider__button-right"></div>
                         </div>
                     </div>
                 </div>
                 <div class="section section-5">
-                    <div class="section__header section__header-center">Dostajesz ode mnie pierwszy trening za darmo
+                    <div class="section__header section__header-center">
+                        Dostajesz ode mnie pierwszy trening za darmo
                     </div>
                     <div class="section__content">
-                        <div class="">
-                            <div style="text-align: center; font-size: 21px; margin-bottom: 16px">A jeśli zdecydujesz
-                                się na dalszą współpracę to:
+                        <div>
+                            <div class="section__second-header">
+                                A jeśli zdecydujesz się na dalszą współpracę to:
                             </div>
-                            <div style="display: flex">
-                                <div style="display: flex; align-items: center">
+                            <div class="flex-center">
+                                <div class="flex-center">
                                     <div>
-                                        <i class="iconflat icon-gym-station"
-                                           style="font-size: 40px; margin-right: 24px;"></i>
+                                        <i class="iconflat icon-gym-station"></i>
                                     </div>
                                     <div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>1 trening personalny</div>
-                                            <div style="padding-left: 16px">99,00 zł</div>
+                                            <div>99,00 zł</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>5 treningów personalnych</div>
-                                            <div style="padding-left: 16px">399,00 zł</div>
+                                            <div>399,00 zł</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>10 treningów personalnych</div>
-                                            <div style="padding-left: 16px">699,00 zł</div>
+                                            <div>699,00 zł</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div style="display: flex; align-items: center; margin-left: 42px">
+                                <div class="flex-center">
                                     <div>
-                                        <i class="iconflat icon-workout"
-                                           style="font-size: 40px; margin-right: 24px; position: relative; left: 4px"></i>
+                                        <i class="iconflat icon-workout"></i>
                                     </div>
                                     <div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>Konsultacja żywieniowa</div>
-                                            <div style="padding-left: 16px">49,00 zł</div>
+                                            <div>49,00 zł</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>Ułożenie diety</div>
-                                            <div style="padding-left: 16px">149,00 zł</div>
+                                            <div>149,00 zł</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>Ułożenie planu treningowego</div>
-                                            <div style="padding-left: 16px">149,00 zł</div>
+                                            <div>149,00 zł</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; justify-content: space-between; margin: 6px">
+                                        <div class="section__content__element">
                                             <div>Ułożenie diety + planu treningowego</div>
-                                            <div style="padding-left: 16px">249,00 zł</div>
+                                            <div>249,00 zł</div>
                                         </div>
                                     </div>
                                 </div>
@@ -285,35 +277,31 @@
 
                 <div class="section section-6">
                     <div class="section__content">
-                        <div style="display: flex">
-                            <div style="display: flex; flex-direction: column; justify-content: center">
+                        <div class="flex-center">
+                            <div class="section__content__box">
                                 <div class="section__header">Czekam na wszystkie Twoje pytania</div>
-                                <div style="display: flex; justify-content: space-between">
-                                    <div class="">
-                                        <div style="display: flex; align-items: center; margin: 8px">
-                                            <svg class="svg-icon" viewBox="0 0 20 20"
-                                                 style="width: 30px; height: 30px; fill: #ffffff; margin-right: 16px">
+                                <div class="section__content__box__elements">
+                                    <div>
+                                        <div class="section__content__element">
+                                            <svg class="svg-icon" viewBox="0 0 20 20">
                                                 <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
                                             </svg>
                                             <div>Paweł Zych</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin: 8px">
-                                            <svg class="svg-icon" viewBox="0 0 20 20"
-                                                 style="width: 30px; height: 30px; fill: #ffffff; margin-right: 16px">
+                                        <div class="section__content__element">
+                                            <svg class="svg-icon" viewBox="0 0 20 20">
                                                 <path d="M17.659,3.681H8.468c-0.211,0-0.383,0.172-0.383,0.383v2.681H2.341c-0.21,0-0.383,0.172-0.383,0.383v6.126c0,0.211,0.172,0.383,0.383,0.383h1.532v2.298c0,0.566,0.554,0.368,0.653,0.27l2.569-2.567h4.437c0.21,0,0.383-0.172,0.383-0.383v-2.681h1.013l2.546,2.567c0.242,0.249,0.652,0.065,0.652-0.27v-2.298h1.533c0.211,0,0.383-0.172,0.383-0.382V4.063C18.042,3.853,17.87,3.681,17.659,3.681 M11.148,12.87H6.937c-0.102,0-0.199,0.04-0.27,0.113l-2.028,2.025v-1.756c0-0.211-0.172-0.383-0.383-0.383H2.724V7.51h5.361v2.68c0,0.21,0.172,0.382,0.383,0.382h2.68V12.87z M17.276,9.807h-1.533c-0.211,0-0.383,0.172-0.383,0.383v1.755L13.356,9.92c-0.07-0.073-0.169-0.113-0.27-0.113H8.851v-5.36h8.425V9.807z"></path>
                                             </svg>
                                             <div>+48 515 123 834</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin: 8px">
-                                            <svg class="svg-icon" viewBox="0 0 20 20"
-                                                 style="width: 30px; height: 30px; fill: #ffffff; margin-right: 16px">
+                                        <div class="section__content__element">
+                                            <svg class="svg-icon" viewBox="0 0 20 20">
                                                 <path d="M8.749,9.934c0,0.247-0.202,0.449-0.449,0.449H4.257c-0.247,0-0.449-0.202-0.449-0.449S4.01,9.484,4.257,9.484H8.3C8.547,9.484,8.749,9.687,8.749,9.934 M7.402,12.627H4.257c-0.247,0-0.449,0.202-0.449,0.449s0.202,0.449,0.449,0.449h3.145c0.247,0,0.449-0.202,0.449-0.449S7.648,12.627,7.402,12.627 M8.3,6.339H4.257c-0.247,0-0.449,0.202-0.449,0.449c0,0.247,0.202,0.449,0.449,0.449H8.3c0.247,0,0.449-0.202,0.449-0.449C8.749,6.541,8.547,6.339,8.3,6.339 M18.631,4.543v10.78c0,0.248-0.202,0.45-0.449,0.45H2.011c-0.247,0-0.449-0.202-0.449-0.45V4.543c0-0.247,0.202-0.449,0.449-0.449h16.17C18.429,4.094,18.631,4.296,18.631,4.543 M17.732,4.993H2.46v9.882h15.272V4.993z M16.371,13.078c0,0.247-0.202,0.449-0.449,0.449H9.646c-0.247,0-0.449-0.202-0.449-0.449c0-1.479,0.883-2.747,2.162-3.299c-0.434-0.418-0.714-1.008-0.714-1.642c0-1.197,0.997-2.246,2.133-2.246s2.134,1.049,2.134,2.246c0,0.634-0.28,1.224-0.714,1.642C15.475,10.331,16.371,11.6,16.371,13.078M11.542,8.137c0,0.622,0.539,1.348,1.235,1.348s1.235-0.726,1.235-1.348c0-0.622-0.539-1.348-1.235-1.348S11.542,7.515,11.542,8.137 M15.435,12.629c-0.214-1.273-1.323-2.246-2.657-2.246s-2.431,0.973-2.644,2.246H15.435z"></path>
                                             </svg>
                                             <div>NIP 555-209-70-23</div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin: 8px">
-                                            <svg class="svg-icon" viewBox="0 0 20 20"
-                                                 style="width: 30px; height: 30px; fill: #ffffff; margin-right: 16px">
+                                        <div class="section__content__element">
+                                            <svg class="svg-icon" viewBox="0 0 20 20">
                                                 <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
                                             </svg>
                                             <div>kontakt@pawelzych.pl</div>
@@ -321,18 +309,18 @@
                                     </div>
                                     <div>
                                         <div>
-                                            <textarea type="text" placeholder="Twoje pytanie" maxlength="500" style="font-family: roboto; border-radius: 6px; width: 300px; height: 114px; background-color: rgb(255,255,255,0.2); border: 0; color: #ffffff; padding: 8px"></textarea>
+                                            <textarea type="text" placeholder="Twoje pytanie" maxlength="2500" class="form message"></textarea>
                                         </div>
                                         <div>
-                                            <input type="email" placeholder="Twój e-mail" style="font-family: roboto; border-radius: 6px; width: 300px; margin-top: 4px; background-color: rgb(255,255,255,0.2); border: 0; color: #ffffff; padding: 8px">
+                                            <input type="email" placeholder="Twój e-mail" maxlength="45" class="form mail">
                                         </div>
-                                        <div style="display: flex; justify-content: flex-end; margin-top: 8px">
-                                            <input type="button" value="WYŚLIJ" style="font-family: roboto; border-radius: 6px; padding: 8px 16px; background-color: rgb(255,255,255,0.2); border: 0; color: #ffffff; cursor: pointer">
+                                        <div class="button-div">
+                                            <input type="button" value="WYŚLIJ" class="form button">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="">
+                            <div>
                                 <img class="section__image section__image-right" src="./assets/zych2.jpg">
                             </div>
                         </div>
@@ -404,26 +392,44 @@
 
     .icon-dumbbell:before {
         content: "\f100";
+        position: relative;
+        top: 8px;
     }
 
     .icon-stationary-bike:before {
         content: "\f101";
+        position: relative;
+        top: 0px;
     }
 
     .icon-isotonic:before {
         content: "\f102";
+        position: relative;
+        top: 1px;
+        left: 6px;
     }
 
     .icon-workout:before {
         content: "\f103";
+        font-size: 40px;
+        margin-right: 24px;
+        margin-left: 42px;
+        position: relative;
+        left: 4px;
     }
 
     .icon-stopwatch:before {
         content: "\f104";
+        position: relative;
+        top: 1px;
+        left: 2px;
     }
 
     .icon-kettlebell:before {
         content: "\f105";
+        position: relative;
+        top: 1px;
+        left: 4px;
     }
 
     .icon-sport-wear:before {
@@ -436,10 +442,14 @@
 
     .icon-treadmill:before {
         content: "\f108";
+        position: relative;
+        top: 3px;
     }
 
     .icon-gym-station:before {
         content: "\f109";
+        font-size: 40px;
+        margin-right: 24px;
     }
 
     .icon-kettlebell-1:before {
@@ -777,9 +787,26 @@
         text-align: center;
     }
 
+    .section__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+    }
+
     .section-1 .section__header {
         text-align: left;
         font-size: 45px;
+    }
+
+    .section-1 .section__content__text {
+        width: 50%;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .section-1 .section__content__text > p {
+        margin: 15px 0;
     }
 
     .section-2 .section__header {
@@ -795,52 +822,171 @@
     .section-2 .iconflat {
         font-size: 28px;
         margin-right: 16px;
-        position: relative;
-        top: 7px;
+    }
+
+    .section-2 .section__content__text {
+        margin: 24px auto;
+        display: flex;
+    }
+
+    .section-2 .section__content__text > div:nth-child(2) {
+        margin-left: 32px;
+    }
+
+    .section-2 .section__content__element {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin-bottom: 10px;
     }
 
     .section-3 .section__header {
         font-size: 40px;
     }
 
-    .section-4 .section__header {
-        font-size: 45px;
-    }
-
-    .section-5 .section__header {
-        font-size: 35px;
-    }
-
-    .section-6 .section__header {
-        font-size: 35px;
-    }
-
-    .section__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-    }
-
-    .section__content__text {
-        width: 50%;
-        font-size: 16px;
-        text-align: justify;
-    }
-
-    .section__content__element {
+    .section-3 .section__content__element {
         margin: 24px;
         font-size: 16px;
         width: 24%;
         align-self: flex-start;
     }
 
-    .section__content__element__header {
+    .section-3 .section__content__element__header {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         font-size: 26px;
         margin-bottom: 12px;
+    }
+
+    .section-4 .section__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-4 .section__header {
+        font-size: 45px;
+    }
+
+    .section-4 .section__slider {
+        width: 80%;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+    }
+
+    .section-4 .section__slider__button {
+        width: 0;
+        height: 0;
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        cursor: pointer;
+    }
+
+    .section-4 .section__slider__button-left {
+        border-right: 40px solid #ffffff;
+    }
+
+    .section-4 .section__slider__button-right {
+        border-left: 40px solid #ffffff;
+    }
+
+    .section-4 .section__slider__content {
+        display: flex;
+        margin: 0 72px;
+    }
+
+    .section-4 .section__slider__content__quotes {
+        font-size: 100px;
+    }
+
+    .section-4 .section__slider__content__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        padding: 24px;
+        font-size: 22px;
+    }
+
+    .section-5 .section__header {
+        font-size: 35px;
+    }
+
+    .section-5 .section__second-header {
+        text-align: center;
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .section-5 .section__content__element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 6px;
+    }
+
+    .section-5 .section__content__element > div:nth-child(2) {
+        padding-left: 16px;
+    }
+
+    .section-6 .section__header {
+        font-size: 35px;
+    }
+
+    .section-6 .section__content__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section-6 .section__content__element {
+        display: flex;
+        align-items: center;
+        margin: 8px;
+    }
+
+    .section-6 .section__content__box__elements {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-6 .svg-icon {
+        width: 30px;
+        height: 30px;
+        fill: #ffffff;
+        margin-right: 16px;
+    }
+
+    .section-6 .form {
+        border-radius: 6px;
+        background-color: rgb(255,255,255,0.2);
+        border: 0;
+        color: #ffffff;
+        padding: 8px;
+        font-family: roboto;
+    }
+
+    .section-6 .message {
+        width: 300px;
+        height: 114px;
+    }
+
+    .section-6 .mail {
+        width: 300px;
+        margin-top: 4px;
+    }
+
+    .section-6 .button {
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+    .section-6 .button-div {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 8px;
     }
 
     .number {
@@ -870,10 +1016,6 @@
         padding-left: 2px;
     }
 
-    .section__content__text > p {
-        margin: 15px 0;
-    }
-
     .section__image {
         max-height: 50vh;
         border-radius: 4px;
@@ -885,5 +1027,27 @@
 
     .section__image-left {
         margin-right: 48px;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #ffffff;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: #ffffff;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+        color: #ffffff;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: #ffffff;
+    }
+
+    .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
