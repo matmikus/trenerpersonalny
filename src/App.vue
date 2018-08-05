@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="loading-screen" v-bind:loaded="this.loaded">
+        <div id="loading-screen" v-bind:loaded="loaded">
             <div id="loading" class="loading__container">
                 <div class="loading__circle">
                     <div class="loading__circle__inside">
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="section section-3">
-                    <div class="section__header section__header-center">Prowadzę Cię do wymarzonej sylwetki i doskonałej
+                    <div class="section__header section__header-center">Poprowadzę Cię do wymarzonej sylwetki i doskonałej
                         formy
                     </div>
                     <div class="section__content">
@@ -202,19 +202,55 @@
                 <div class="section section-4">
                     <div class="section__content">
                         <div class="section__header section__header-center">Moją wizytówką są zadowoleni klienci</div>
-                        <div class="section__slider">
-                            <div class="section__slider__button section__slider__button-left"></div>
-                            <div class="section__slider__content">
-                                <div class="section__slider__content__quotes">&bdquo;
-                                </div>
-                                <div class="section__slider__content__text">
-                                    Treningi z Pawłem to zawsze świetna zabawa. Są ciężkie, ale on umie mnie odpowiednio
-                                    zmotywować. Pierwsze efekty były widoczne bardzo szybko.
-                                </div>
-                                <div class="section__slider__content__quotes">&ldquo;
-                                </div>
+                        <div class="section__slider" style="justify-content: space-between">
+                            <div class="section__slider__button section__slider__button-left" v-on:click="moveSlider('left')"></div>
+                            <div style="overflow: hidden; position: relative; width: 100%; height: 150px">
+                                    <div class="section__slider__content">
+                                        <div class="section__slider__content__quotes">
+                                            <span style="flex: 1"></span>
+                                            <span>
+                                                &bdquo;
+                                            </span>
+                                        </div>
+                                        <div class="section__slider__content__text">
+                                            Treningi z Pawłem to zawsze świetna zabawa. Są ciężkie, ale on umie mnie odpowiednio
+                                            zmotywować. Pierwsze efekty były widoczne bardzo szybko.
+                                        </div>
+                                        <div class="section__slider__content__quotes">
+                                            &ldquo;
+                                        </div>
+                                    </div>
+                                    <div class="section__slider__content">
+                                        <div class="section__slider__content__quotes">
+                                            <span style="flex: 1"></span>
+                                            <span>
+                                                &bdquo;
+                                            </span>
+                                        </div>
+                                        <div class="section__slider__content__text">
+                                            Obawiałam się treningu na siłowni ze względu na moją nadwagę. Jednak przy Pawle wszystkie moje kompleksy zniknęły. Jego podejście pozwala mi skupić się na treningu i wykonywać go z pełną satysfakcją.
+                                        </div>
+                                        <div class="section__slider__content__quotes">
+                                            &ldquo;
+                                        </div>
+                                    </div>
+                                    <div class="section__slider__content">
+                                        <div class="section__slider__content__quotes">
+                                            <span style="flex: 1"></span>
+                                            <span>
+                                                &bdquo;
+
+                                            </span>
+                                        </div>
+                                        <div class="section__slider__content__text">
+                                            Na treningu personalnym z Pawłem mogłem się poczuć jak profesjonalny sportowiec. Jego podejście i fachowość pomogły mi poprawić technikę wykonywania ćwiczeń, a co za tym idzie polepszyłem swoje wyniki.
+                                        </div>
+                                        <div class="section__slider__content__quotes">
+                                            &ldquo;
+                                        </div>
+                                    </div>
                             </div>
-                            <div class="section__slider__button section__slider__button-right"></div>
+                            <div class="section__slider__button section__slider__button-right" v-on:click="moveSlider('right')"></div>
                         </div>
                     </div>
                 </div>
@@ -309,13 +345,42 @@
                                     </div>
                                     <div>
                                         <div>
-                                            <textarea type="text" placeholder="Twoje pytanie" maxlength="2500" class="form message"></textarea>
+                                            <textarea placeholder="Twoje pytanie" maxlength="2500" class="form message" v-model="formMessage"></textarea>
                                         </div>
                                         <div>
-                                            <input type="email" placeholder="Twój e-mail" maxlength="45" class="form mail">
+                                            <input type="email" placeholder="Twój e-mail" maxlength="45" class="form mail" v-model="formMail">
                                         </div>
                                         <div class="button-div">
-                                            <input type="button" value="WYŚLIJ" class="form button">
+                                            <div class="form-status">
+                                                {{formStatus}}
+                                                <div class="form-loader">
+                                                        <div class="loading__weights">
+                                                            <div class="w1 wl">
+                                                            </div>
+                                                            <div class="w2">
+                                                            </div>
+                                                            <div class="w3">
+                                                            </div>
+                                                            <div class="w4">
+                                                            </div>
+                                                            <div class="w5">
+                                                            </div>
+                                                            <div class="w6">
+                                                            </div>
+                                                            <div class="w5">
+                                                            </div>
+                                                            <div class="w4">
+                                                            </div>
+                                                            <div class="w3">
+                                                            </div>
+                                                            <div class="w2">
+                                                            </div>
+                                                            <div class="w1 wr">
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <input type="button" value="WYŚLIJ" class="form button" v-on:click="sendMessage">
                                         </div>
                                     </div>
                                 </div>
@@ -351,19 +416,105 @@
                     navigation: true,
                     anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6']
                 },
+                slides: [],
+                activeSlideIndex: 0,
+                disableSlider: false,
+                formMessage: '',
+                formMail: '',
+                formStatus: '',
+                formStatusColor: 'white'
             }
         },
         methods: {
             afterLoad() {
-                // console.log("Emitted 'after load' event.");
-                let self = this;
-                setTimeout(function () {
-                    self.loaded = true;
+                setTimeout(() => {
+                    this.loaded = true;
                 }, 2000);
+                this.slides = document.querySelectorAll('.section__slider__content');
+                this.slides[0].style.left = '0';
+                this.slides[0].style.transitionDuration = '1000ms';
+                this.slides[1].style.left = '100%';
+                this.slides[this.slides.length - 1].style.left = '-100%';
             },
 
             toggleNavigation: function () {
                 this.options.navigation = !this.options.navigation;
+            },
+
+            moveSlider: function (direction) {
+                if (this.disableSlider === false) {
+                    this.disableSlider = true;
+
+                    if (direction === 'right') {
+                        this.slides[this.activeSlideIndex].style.left = '-100%';
+                        this.slides[this.getSlideProperIndex(this.activeSlideIndex + 1)].style.transitionDuration = '1000ms';
+                        this.slides[this.getSlideProperIndex(this.activeSlideIndex + 1)].style.left = '0';
+
+                        setTimeout(() => {
+                            this.slides[this.activeSlideIndex].style.transitionDuration = '0ms';
+                            this.activeSlideIndex = this.getSlideProperIndex(this.activeSlideIndex + 1);
+                            this.slides[this.getSlideProperIndex(this.activeSlideIndex + 1)].style.left = '100%';
+                            this.slides[this.getSlideProperIndex(this.activeSlideIndex - 1)].style.left = '-100%';
+                            this.disableSlider = false;
+                        }, 1000);
+                    } else if (direction === 'left') {
+                        this.slides[this.activeSlideIndex].style.left = '100%';
+                        this.slides[this.getSlideProperIndex(this.activeSlideIndex - 1)].style.transitionDuration = '1000ms';
+                        this.slides[this.getSlideProperIndex(this.activeSlideIndex - 1)].style.left = '0';
+
+                        setTimeout(() => {
+                            this.slides[this.activeSlideIndex].style.transitionDuration = '0ms';
+                            this.activeSlideIndex = this.getSlideProperIndex(this.activeSlideIndex - 1);
+                            this.slides[this.getSlideProperIndex(this.activeSlideIndex + 1)].style.left = '100%';
+                            this.slides[this.getSlideProperIndex(this.activeSlideIndex - 1)].style.left = '-100%';
+                            this.disableSlider = false;
+                        }, 1000);
+                    }
+                }
+            },
+
+            getSlideProperIndex: function (index) {
+                if (index < 0) {
+                    return this.slides.length - 1;
+                } else if (index >= this.slides.length) {
+                    return 0;
+                } else {
+                    return index;
+                }
+            },
+
+            sendMessage: function () {
+                if (this.formMessage === '') {
+                    this.formStatus = 'Nie wpisano wiadomości';
+                } else if (this.formMail === '') {
+                    this.formStatus = 'Nie podano adresu e-mail';
+                } else if (!this.isEmailCorrect(this.formMail)) {
+                    this.formStatus = 'Niepoprawny adres e-mail';
+                } else {
+                    this.formStatus = 'Wysyłanie wiadomości';
+                    document.querySelector('.form-loader').style.visibility = 'visible';
+                    setTimeout(() => {
+                        const success = false;
+
+                        if (success) {
+                            this.formStatus = 'Wysłano pomyślnie';
+                            this.formMessage = '';
+                            this.formMail = '';
+                        } else {
+                            this.formStatus = 'Błąd - Spróbuj ponownie';
+                        }
+
+                        document.querySelector('.form-loader').style.visibility = 'hidden';
+                    }, 3000);
+                }
+            },
+
+            isEmailCorrect: function (address) {
+                return true;
+            },
+
+            klikniecie: function () {
+                console.log('kliknieto')
             }
         }
     }
@@ -619,6 +770,9 @@
         width: 200px;
         background-color: #000000;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .loading__circle {
@@ -683,8 +837,8 @@
     }
 
     .loading__weights {
-        width: 90%;
-        height: 90%;
+        width: 70%;
+        height: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -810,7 +964,7 @@
     }
 
     .section-2 .section__header {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .section-2 .section__content {
@@ -841,7 +995,7 @@
     }
 
     .section-3 .section__header {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .section-3 .section__content__element {
@@ -866,7 +1020,7 @@
     }
 
     .section-4 .section__header {
-        font-size: 45px;
+        font-size: 36px;
     }
 
     .section-4 .section__slider {
@@ -895,10 +1049,18 @@
     .section-4 .section__slider__content {
         display: flex;
         margin: 0 72px;
+        position: absolute;
+        left: 100%;
+        width: calc(100% - 144px);
+        transition-property: left;
+        transition-duration: 0ms;
+        transition-timing-function: ease-in-out;
     }
 
     .section-4 .section__slider__content__quotes {
         font-size: 100px;
+        display: flex;
+        flex-direction: column;
     }
 
     .section-4 .section__slider__content__text {
@@ -911,7 +1073,7 @@
     }
 
     .section-5 .section__header {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     .section-5 .section__second-header {
@@ -933,6 +1095,7 @@
 
     .section-6 .section__header {
         font-size: 35px;
+        margin-bottom: 42px;
     }
 
     .section-6 .section__content__box {
@@ -944,7 +1107,7 @@
     .section-6 .section__content__element {
         display: flex;
         align-items: center;
-        margin: 8px;
+        margin: 0 8px 16px 0;
     }
 
     .section-6 .section__content__box__elements {
@@ -970,7 +1133,7 @@
 
     .section-6 .message {
         width: 300px;
-        height: 114px;
+        height: 85px;
     }
 
     .section-6 .mail {
@@ -983,10 +1146,42 @@
         cursor: pointer;
     }
 
+    .section-6 .form-status {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 14px;
+        padding-left: 8px;
+    }
+
+    .section-6 .loading__weights {
+        width: 100%;
+        height: 100%;
+
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
     .section-6 .button-div {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         margin-top: 8px;
+    }
+
+    .section-6 .form-loader {
+        visibility: hidden;
+
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin-left: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .number {
@@ -1018,7 +1213,7 @@
 
     .section__image {
         max-height: 50vh;
-        border-radius: 4px;
+        border-radius: 5px;
     }
 
     .section__image-right {
