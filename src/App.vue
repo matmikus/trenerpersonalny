@@ -71,6 +71,11 @@
                         </svg>
                         Kalisz
                     </div>
+                    <div id="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
                 <ul id="menu">
                     <li data-menuanchor="page1" class="active"><a href="#page1">Start</a></li>
@@ -202,12 +207,12 @@
                 <div class="section section-4">
                     <div class="section__content">
                         <div class="section__header section__header-center">Moją wizytówką są zadowoleni klienci</div>
-                        <div class="section__slider" style="justify-content: space-between">
+                        <div class="section__slider">
                             <div class="section__slider__button section__slider__button-left" v-on:click="moveSlider('left')"></div>
-                            <div style="overflow: hidden; position: relative; width: 100%; height: 150px">
+                            <div class="section__slider__content__box">
                                     <div class="section__slider__content">
                                         <div class="section__slider__content__quotes">
-                                            <span style="flex: 1"></span>
+                                            <span></span>
                                             <span>
                                                 &bdquo;
                                             </span>
@@ -222,7 +227,7 @@
                                     </div>
                                     <div class="section__slider__content">
                                         <div class="section__slider__content__quotes">
-                                            <span style="flex: 1"></span>
+                                            <span></span>
                                             <span>
                                                 &bdquo;
                                             </span>
@@ -236,7 +241,7 @@
                                     </div>
                                     <div class="section__slider__content">
                                         <div class="section__slider__content__quotes">
-                                            <span style="flex: 1"></span>
+                                            <span></span>
                                             <span>
                                                 &bdquo;
 
@@ -263,8 +268,8 @@
                             <div class="section__second-header">
                                 A jeśli zdecydujesz się na dalszą współpracę to:
                             </div>
-                            <div class="flex-center">
-                                <div class="flex-center">
+                            <div class="flex-center section__content__box">
+                                <div class="flex-center section__content__text">
                                     <div>
                                         <i class="iconflat icon-gym-station"></i>
                                     </div>
@@ -283,7 +288,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex-center">
+                                <div class="flex-center section__content__text">
                                     <div>
                                         <i class="iconflat icon-workout"></i>
                                     </div>
@@ -348,7 +353,7 @@
                                             <textarea placeholder="Twoje pytanie" maxlength="2500" class="form message" v-model="formMessage"></textarea>
                                         </div>
                                         <div>
-                                            <input type="email" placeholder="Twój e-mail" maxlength="45" class="form mail" v-model="formMail">
+                                            <input type="email" placeholder="Twój e-mail" maxlength="45" class="form mail" v-model="formMail" v-on:keyup.enter="sendMessage">
                                         </div>
                                         <div class="button-div">
                                             <div class="form-status">
@@ -429,12 +434,13 @@
             afterLoad() {
                 setTimeout(() => {
                     this.loaded = true;
+                    this.loaded = true;
                 }, 2000);
                 this.slides = document.querySelectorAll('.section__slider__content');
-                this.slides[0].style.left = '0';
-                this.slides[0].style.transitionDuration = '1000ms';
-                this.slides[1].style.left = '100%';
-                this.slides[this.slides.length - 1].style.left = '-100%';
+                this.slides[this.activeSlideIndex].style.left = '0';
+                this.slides[this.activeSlideIndex].style.transitionDuration = '1000ms';
+                this.slides[this.getSlideProperIndex(this.activeSlideIndex + 1)].style.left = '100%';
+                this.slides[this.getSlideProperIndex(this.activeSlideIndex - 1)].style.left = '-100%';
             },
 
             toggleNavigation: function () {
@@ -511,10 +517,6 @@
 
             isEmailCorrect: function (address) {
                 return true;
-            },
-
-            klikniecie: function () {
-                console.log('kliknieto')
             }
         }
     }
@@ -564,7 +566,6 @@
         content: "\f103";
         font-size: 40px;
         margin-right: 24px;
-        margin-left: 42px;
         position: relative;
         left: 4px;
     }
@@ -681,6 +682,21 @@
         width: 32px;
         color: #fff;
         fill: #fff;
+    }
+
+    #hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 34px;
+        height: 34px;
+        icon: pointer;
+    }
+
+    #hamburger > div {
+        background-color: #ffffff;
+        height: 20%;
+        border-radius: 2px;
     }
 
     #menu {
@@ -983,8 +999,8 @@
         display: flex;
     }
 
-    .section-2 .section__content__text > div:nth-child(2) {
-        margin-left: 32px;
+    .section-2 .section__content__text > div:nth-child(1) {
+        margin-right: 32px;
     }
 
     .section-2 .section__content__element {
@@ -1023,11 +1039,19 @@
         font-size: 36px;
     }
 
+    .section-4 .section__slider__content__box {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 150px;
+    }
+
     .section-4 .section__slider {
         width: 80%;
         color: #ffffff;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .section-4 .section__slider__button {
@@ -1069,7 +1093,11 @@
         justify-content: center;
         text-align: justify;
         padding: 24px;
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .section-4 .section__slider__content__quotes > span:nth-child(1) {
+        flex: 1;
     }
 
     .section-5 .section__header {
@@ -1093,6 +1121,10 @@
         padding-left: 16px;
     }
 
+    .section-5 .section__content__box > div:nth-child(1) {
+        margin-right: 48px;
+    }
+
     .section-6 .section__header {
         font-size: 35px;
         margin-bottom: 42px;
@@ -1107,7 +1139,7 @@
     .section-6 .section__content__element {
         display: flex;
         align-items: center;
-        margin: 0 8px 16px 0;
+        margin: 0 16px 16px 0;
     }
 
     .section-6 .section__content__box__elements {
@@ -1244,5 +1276,204 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    @media only screen and (max-width: 1100px) {
+        #top {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header {
+            width: unset;
+        }
+
+        .section > div {
+            padding-top: 140px;
+        }
+
+        .section-1 .section__header {
+            font-size: 34px;
+        }
+
+        @media only screen and (max-width: 620px) {
+            #menu {
+                display: none;
+            }
+
+            #header {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            #hamburger {
+                display: flex;
+            }
+
+            .header-place {
+                display: none;
+            }
+
+            .header-title {
+                margin: 0;
+            }
+
+            @media only screen and (max-width: 500px) {
+                .pz-logo {
+                    font-size: 60px;
+                    text-align: center;
+                }
+
+                .pz-logo-caption {
+                    font-size: 12px;
+                    right: 0;
+                }
+
+                .header-title {
+                    font-size: 20px;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    .pz-logo {
+                        font-size: 50px;
+                    }
+
+                    .pz-logo-caption {
+                        font-size: 10px;
+                    }
+
+                    .header-title {
+                        font-size: 14px;
+                    }
+
+                    #hamburger {
+                        width: 28px;
+                        height: 28px;
+                    }
+
+                    #top {
+                        padding: 8px 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .section-1 .section__content__text > p {
+            font-size: 15px;
+        }
+
+        @media only screen and (max-width: 940px) {
+            .section-1 .section__content__text > p {
+                margin: 6px 0;
+                font-size: 14px;
+            }
+
+            .section-1 .section__header {
+                margin-bottom: 8px;
+                font-size: 30px;
+            }
+
+            .section-2 .section__header {
+                font-size: 31px;
+            }
+
+            .section-3 .section__header {
+                font-size: 28px;
+            }
+
+            .section-4 .section__header {
+                font-size: 29px;
+            }
+
+            .section-5 .section__header {
+                font-size: 30px;
+            }
+
+            .section-6 .section__header {
+                font-size: 31px;
+            }
+
+            @media only screen and (max-width: 860px) {
+                .section-1 .section__content__text > p {
+                    font-size: 13px;
+                }
+
+                .section-1 .section__header {
+                    font-size: 26px;
+                    margin-bottom: 0;
+                }
+
+                .section-2 .section__header {
+                    font-size: 23px;
+                    margin-bottom: 0;
+                }
+
+                .section-2 .section__content {
+                    font-size: 17px;
+                }
+
+                .section-2 .section__content__text {
+                    flex-direction: column;
+                }
+
+                .section-2 .section__content__element {
+                    margin-bottom: 5px;
+                }
+
+                .section-3 .section__header {
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+
+                .section-3 .section__content__element {
+                    width: 26%;
+                }
+
+                .section-3 .section__content__element__header {
+                    font-size: 22px;
+                }
+
+                .section-4 .section__slider__content__text {
+                    font-size: 19px;
+                }
+
+                .section-4 .section__slider__content {
+                    width: calc(100% - 70px);
+                    margin: 0 35px;
+                }
+
+                .section-4 .section__slider__content__box {
+                    height: 160px;
+                }
+
+                .section-5 .section__content__box {
+                    flex-direction: column;
+                }
+
+                .section-5 .section__content__box > div:nth-child(1) {
+                    margin-right: 0;
+                }
+
+                .section-5 .section__content__text:nth-child(1) .section__content__element > div:nth-child(2) {
+                    padding-left: 90px;
+                }
+
+                @media only screen and (max-width: 820px) {
+                    .section-4 .section__slider {
+                        width: 90%;
+                    }
+
+                    .section-4 .section__slider__content__text {
+                        font-size: 18px;
+                    }
+
+                    .section-6 .section__image-right {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 </style>
