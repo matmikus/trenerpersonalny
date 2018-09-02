@@ -41,59 +41,80 @@
             </div>
         </div>
         <div>
-            <div id="top">
-                <div id="header">
-                    <div class="logo">
-                        <div class="pz-logo">
-                            PZ
+            <div id="top-container">
+                <div id="top">
+                    <div id="header">
+                        <div class="logo">
+                            <div class="pz-logo">
+                                PZ
+                            </div>
+                            <div class="pz-logo-caption">
+                                Paweł Zych
+                            </div>
                         </div>
-                        <div class="pz-logo-caption">
-                            Paweł Zych
+                        <div class="header-title">
+                            <div>
+                                TRENER
+                            </div>
+                            <div>
+                                PERSONALNY
+                            </div>
                         </div>
-                    </div>
-                    <div class="header-title">
-                        <div>
-                            TRENER
-                        </div>
-                        <div>
-                            PERSONALNY
-                        </div>
-                    </div>
-                    <div class="header-place">
-                        <svg class="icon-place" viewBox="0 0 20 20">
-                            <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,
+                        <div class="header-place">
+                            <svg class="icon-place" viewBox="0 0 20 20">
+                                <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,
                             0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,
                             1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,
                             2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,
                             3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,
                             0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,
                             9.589"></path>
-                        </svg>
-                        Kalisz
+                            </svg>
+                            Gdańsk
+                        </div>
+                        <div id="hamburger" v-on:click="toggleMobileMenu()">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
-                    <div id="hamburger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <ul id="menu">
-                    <li data-menuanchor="page1" class="active"><a href="#page1">Start</a></li>
-                    <li data-menuanchor="page2"><a href="#page2">Treningi</a></li>
-                    <li data-menuanchor="page3"><a href="#page3">Etapy</a></li>
-                    <li data-menuanchor="page4"><a href="#page4">Opinie</a></li>
-                    <li data-menuanchor="page5"><a href="#page5">Cennik</a></li>
-                    <li data-menuanchor="page6"><a href="#page6">Kontakt</a></li>
-                    <li>
-                        <a href="http://www.facebook.com/trenerpersonalnykalisz" target="_blank" title="Facebook">
-                            <svg class="icon-facebook" viewBox="0 0 512 512">
-                                <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1
+                    <ul id="menu">
+                        <li data-menuanchor="page1" class="active"><a href="#page1">Start</a></li>
+                        <li data-menuanchor="page2"><a href="#page2">Treningi</a></li>
+                        <li data-menuanchor="page3"><a href="#page3">Etapy</a></li>
+                        <li data-menuanchor="page4"><a href="#page4">Opinie</a></li>
+                        <li data-menuanchor="page5"><a href="#page5">Cennik</a></li>
+                        <li data-menuanchor="page6"><a href="#page6">Kontakt</a></li>
+                        <li>
+                            <a href="http://www.facebook.com/pawelzychtrenerpersonalny" target="_blank" title="Facebook">
+                                <svg class="icon-facebook" viewBox="0 0 512 512">
+                                    <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1
                                 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5
                                 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mobile-menu" v-on:click="toggleMobileMenu()">
+                    <ul>
+                        <li data-menuanchor="page1" class="active"><a href="#page1">Start</a></li>
+                        <li data-menuanchor="page2"><a href="#page2">Treningi</a></li>
+                        <li data-menuanchor="page3"><a href="#page3">Etapy</a></li>
+                        <li data-menuanchor="page4"><a href="#page4">Opinie</a></li>
+                        <li data-menuanchor="page5"><a href="#page5">Cennik</a></li>
+                        <li data-menuanchor="page6"><a href="#page6">Kontakt</a></li>
+                        <li>
+                            <a href="http://www.facebook.com/pawelzychtrenerpersonalny" target="_blank" title="Facebook">
+                                <svg class="icon-facebook" viewBox="0 0 512 512">
+                                    <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1
+                                0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5
+                                0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <full-page :options="options" @after-load="afterLoad" id="fullpage">
@@ -108,7 +129,7 @@
                                 Sport i&nbsp;aktywność fizyczna to mój styl życia. Trenując siebie i&nbsp;innych
                                 spełniam
                                 swoje marzenia. Po latach wyrzeczeń i&nbsp;podróży związanych z&nbsp;karierą siatkarską
-                                zamieszkałem na stałe w&nbsp;Kaliszu. Prowadzę treningi personalne wykorzystując wiedzę
+                                zamieszkałem na stałe w&nbsp;Gdańsku. Prowadzę treningi personalne wykorzystując wiedzę
                                 zdobytą podczas studiów na Akademii Wychowania Fizycznego i&nbsp;Sportu w&nbsp;Gdańsku
                                 oraz na Państwowej Wyższej Szkole Zawodowej w&nbsp;Kaliszu uzupełniając ją o&nbsp;szkolenia,
                                 kursy oraz fachową literaturę. Korzystam również z&nbsp;bogatych doświadczeń, które
@@ -427,13 +448,13 @@
                 formMessage: '',
                 formMail: '',
                 formStatus: '',
-                formStatusColor: 'white'
+                formStatusColor: 'white',
+                mobileMenu: false
             }
         },
         methods: {
             afterLoad() {
                 setTimeout(() => {
-                    this.loaded = true;
                     this.loaded = true;
                 }, 2000);
                 this.slides = document.querySelectorAll('.section__slider__content');
@@ -517,6 +538,23 @@
 
             isEmailCorrect: function (address) {
                 return true;
+            },
+
+            toggleMobileMenu: function () {
+                if (!this.mobileMenu) {
+                    document.querySelector('#mobile-menu').setAttribute('expanded', true);
+                    document.querySelector('#hamburger').setAttribute('close', true);
+                    document.querySelector('#top-container').style.height = '100%';
+                    document.querySelector('#mobile-menu').style.height = '100%';
+                } else {
+                    document.querySelector('#mobile-menu').removeAttribute('expanded');
+                    document.querySelector('#hamburger').removeAttribute('close');
+                    setTimeout(() => {
+                        document.querySelector('#top-container').style.height = 'auto';
+                        document.querySelector('#mobile-menu').style.height = '0';
+                    }, 250);
+                }
+                this.mobileMenu = !this.mobileMenu;
             }
         }
     }
@@ -626,14 +664,50 @@
         font-family: roboto;
     }
 
-    #top {
+    #top-container {
         position: fixed;
         top: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    #top {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        z-index: 100;
         padding: 10px 35px;
+    }
+
+    #mobile-menu {
+        background-color: #000000;
+        color: #ffffff;
+        width: 100%;
+        z-index: 101;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        transition: margin-left 250ms ease-out;
+        margin-left: 100%;
+        border-top-left-radius: 20px;
+    }
+
+    #mobile-menu[expanded] {
+        margin-left: 0px;
+    }
+
+    #mobile-menu > ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    #mobile-menu > ul > li {
+        padding: 16px;
+    }
+
+    #mobile-menu a {
+        color: #fff;
     }
 
     #header {
@@ -690,13 +764,30 @@
         justify-content: space-between;
         width: 34px;
         height: 34px;
-        icon: pointer;
+        cursor: pointer;
     }
 
     #hamburger > div {
         background-color: #ffffff;
         height: 20%;
+        width: 100%;
         border-radius: 2px;
+        position: relative;
+        transition: transform 250ms ease-out, top 250ms ease-out, width 5ms ease-out 50ms;
+    }
+
+    #hamburger[close] > div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 14px;
+    }
+
+    #hamburger[close] > div:nth-child(2) {
+        width: 0px;
+    }
+
+    #hamburger[close] > div:nth-child(3) {
+        transform: rotate(135deg);
+        top: -13px;
     }
 
     #menu {
