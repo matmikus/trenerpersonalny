@@ -1053,6 +1053,8 @@
         align-items: center;
         justify-content: center;
         color: #ffffff;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .section-1 .section__header {
