@@ -145,6 +145,41 @@
                             <p>
                                 Zapewniam świetną atmosferę na treningach. Przyjdź i&nbsp;przekonaj się :)
                             </p>
+                            <p class="short-version-text">
+                                Sport i&nbsp;aktywność fizyczna to mój styl życia. Trenując siebie i&nbsp;innych
+                                spełniam
+                                swoje marzenia. Po latach wyrzeczeń i&nbsp;podróży związanych z&nbsp;karierą siatkarską
+                                zamieszkałem na stałe w&nbsp;Gdańsku. Prowadzę treningi personalne wykorzystując wiedzę
+                                zdobytą podczas...
+                                <span class="button-more" v-on:click="setModal('open')">WIĘCEJ</span>
+                                <div id="modal-1" class="modal-more" hidden>
+                                    <div class="modal-more__content">
+                                        <div class="modal-more__text-area">
+                                            <p>
+                                                Sport i&nbsp;aktywność fizyczna to mój styl życia. Trenując siebie i&nbsp;innych
+                                                spełniam
+                                                swoje marzenia. Po latach wyrzeczeń i&nbsp;podróży związanych z&nbsp;karierą siatkarską
+                                                zamieszkałem na stałe w&nbsp;Gdańsku. Prowadzę treningi personalne wykorzystując wiedzę
+                                                zdobytą podczas studiów na Akademii Wychowania Fizycznego i&nbsp;Sportu w&nbsp;Gdańsku
+                                                oraz na Państwowej Wyższej Szkole Zawodowej w&nbsp;Kaliszu uzupełniając ją o&nbsp;szkolenia,
+                                                kursy oraz fachową literaturę. Korzystam również z&nbsp;bogatych doświadczeń, które
+                                                zyskałem jako zawodnik i&nbsp;trener wielu polskich zespołów siatkarskich.
+                                            </p>
+                                            <p>
+                                                Do każdego podopiecznego podchodzę indywidualnie, ponieważ każda osoba ma inne problemy
+                                                i&nbsp;nawyki, nad którymi razem pracujemy. Pomagam ludziom w&nbsp;realizacji ich celów
+                                                związanych z&nbsp;budowaniem masy mięśniowej, redukcją tkanki tłuszczowej i&nbsp;pozbyciem
+                                                się
+                                                wad postawy.
+                                            </p>
+                                            <p>
+                                                Zapewniam świetną atmosferę na treningach. Przyjdź i&nbsp;przekonaj się :)
+                                            </p>
+                                        </div>
+                                        <div class="modal-more__button"  v-on:click="setModal('close')">POWRÓT</div>
+                                    </div>
+                                </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -196,9 +231,16 @@
                                 <div>Plan żywieniowy</div>
                             </div>
                             <div>
-                                Na tym etapie analizuję Twój tryb życia, a w szczególności sposób odżywiania.
-                                Identyfikuję elementy mające negatywne skutki na Twój organizm i zastępuję je
-                                odpowiednimi, dbając o prawidłowe zapotrzebowanie kaloryczne i wartości odżywcze.
+                                <p>
+                                    Na tym etapie analizuję Twój tryb życia, a w szczególności sposób odżywiania.
+                                    Identyfikuję elementy mające negatywne skutki na Twój organizm i zastępuję je
+                                    odpowiednimi, dbając o prawidłowe zapotrzebowanie kaloryczne i wartości odżywcze.
+                                </p>
+                                <p class="short-version-text">
+                                    Na tym etapie analizuję Twój tryb życia, a w szczególności sposób odżywiania.
+                                    Identyfikuję elementy...
+                                    <span class="button-more" v-on:click="setModal2('open')">WIĘCEJ</span>
+                                </p>
                             </div>
                         </div>
                         <div class="section__content__element">
@@ -207,9 +249,16 @@
                                 <div>Plan treningowy</div>
                             </div>
                             <div>
-                                Biorąc pod uwagę Twoje możliwości czasowe układam odpowiedni rozkład treningów. W
-                                zależności od celów, jakie chcesz osiągnąć dobieram odpowiednie metody treningowe,
-                                pamiętając o stopniowaniu trudności i obciążeń.
+                                <p>
+                                    Biorąc pod uwagę Twoje możliwości czasowe układam odpowiedni rozkład treningów. W
+                                    zależności od celów, jakie chcesz osiągnąć dobieram odpowiednie metody treningowe,
+                                    pamiętając o stopniowaniu trudności i obciążeń.
+                                </p>
+                                <p class="short-version-text">
+                                    Na tym etapie analizuję Twój tryb życia, a w szczególności sposób odżywiania.
+                                    Identyfikuję elementy...
+                                    <span class="button-more" v-on:click="setModal2('open')">WIĘCEJ</span>
+                                </p>
                             </div>
                         </div>
                         <div class="section__content__element">
@@ -218,9 +267,41 @@
                                 <div>Treningi</div>
                             </div>
                             <div>
-                                Podczas treningów dbam o poprawne wykonywanie ćwiczeń i aktywnie motywuję Cię dopóki
-                                założenia dnia nie zostaną zrealizowane. Analizuję Twoje postępy na bieżąco i w razie
-                                potrzeby koryguję lub rozwijam Twój plan treningowy.
+                                <p>
+                                    Podczas treningów dbam o poprawne wykonywanie ćwiczeń i aktywnie motywuję Cię dopóki
+                                    założenia dnia nie zostaną zrealizowane. Analizuję Twoje postępy na bieżąco i w razie
+                                    potrzeby koryguję lub rozwijam Twój plan treningowy.
+                                </p>
+                                <p class="short-version-text">
+                                    Na tym etapie analizuję Twój tryb życia, a w szczególności sposób odżywiania.
+                                    Identyfikuję elementy...
+                                    <span class="button-more" v-on:click="setModal2('open')">WIĘCEJ</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="modal-2" class="modal-more" hidden>
+                            <div class="modal-more__content">
+                                <div class="modal-more__text-area">
+                                    <div>1. Plan żywieniowy</div>
+                                    <p>
+                                        Na tym etapie analizuję Twój tryb życia, a w szczególności sposób odżywiania.
+                                        Identyfikuję elementy mające negatywne skutki na Twój organizm i zastępuję je
+                                        odpowiednimi, dbając o prawidłowe zapotrzebowanie kaloryczne i wartości odżywcze.
+                                    </p>
+                                    <div>2. Plan treningowy</div>
+                                    <p>
+                                        Biorąc pod uwagę Twoje możliwości czasowe układam odpowiedni rozkład treningów. W
+                                        zależności od celów, jakie chcesz osiągnąć dobieram odpowiednie metody treningowe,
+                                        pamiętając o stopniowaniu trudności i obciążeń.
+                                    </p>
+                                    <div>3. Treningi</div>
+                                    <p>
+                                        Podczas treningów dbam o poprawne wykonywanie ćwiczeń i aktywnie motywuję Cię dopóki
+                                        założenia dnia nie zostaną zrealizowane. Analizuję Twoje postępy na bieżąco i w razie
+                                        potrzeby koryguję lub rozwijam Twój plan treningowy.
+                                    </p>
+                                </div>
+                                <div class="modal-more__button"  v-on:click="setModal2('close')">POWRÓT</div>
                             </div>
                         </div>
                     </div>
@@ -462,6 +543,7 @@
                 this.slides[this.activeSlideIndex].style.transitionDuration = '1000ms';
                 this.slides[this.getSlideProperIndex(this.activeSlideIndex + 1)].style.left = '100%';
                 this.slides[this.getSlideProperIndex(this.activeSlideIndex - 1)].style.left = '-100%';
+
             },
 
             toggleNavigation: function () {
@@ -555,6 +637,52 @@
                     }, 250);
                 }
                 this.mobileMenu = !this.mobileMenu;
+            },
+
+            setModal: function (action) {
+                if (action === 'open') {
+                    document.querySelector('#modal-1').removeAttribute('hidden');
+                    document.querySelector('#top-container').setAttribute('hidden', true);
+                    document.querySelectorAll('.section-2')[0].style.display = 'none';
+                    document.querySelectorAll('.section-3')[0].style.display = 'none';
+                    document.querySelectorAll('.section-4')[0].style.display = 'none';
+                    document.querySelectorAll('.section-5')[0].style.display = 'none';
+                    document.querySelectorAll('.section-6')[0].style.display = 'none';
+                    this.toggleNavigation();
+                } else if (action === 'close') {
+                    location.href = '#page1';
+                    document.querySelector('#modal-1').setAttribute('hidden', true);
+                    document.querySelector('#top-container').removeAttribute('hidden');
+                    document.querySelectorAll('.section-2')[0].style.display = 'table';
+                    document.querySelectorAll('.section-3')[0].style.display = 'table';
+                    document.querySelectorAll('.section-4')[0].style.display = 'table';
+                    document.querySelectorAll('.section-5')[0].style.display = 'table';
+                    document.querySelectorAll('.section-6')[0].style.display = 'table';
+                    this.toggleNavigation();
+                }
+            },
+
+            setModal2: function (action) {
+                if (action === 'open') {
+                    document.querySelector('#modal-2').removeAttribute('hidden');
+                    document.querySelector('#top-container').setAttribute('hidden', true);
+                    document.querySelectorAll('.section-1')[0].style.display = 'none';
+                    document.querySelectorAll('.section-2')[0].style.display = 'none';
+                    document.querySelectorAll('.section-4')[0].style.display = 'none';
+                    document.querySelectorAll('.section-5')[0].style.display = 'none';
+                    document.querySelectorAll('.section-6')[0].style.display = 'none';
+                    this.toggleNavigation();
+                } else if (action === 'close') {
+                    location.href = '#page3';
+                    document.querySelector('#modal-2').setAttribute('hidden', true);
+                    document.querySelector('#top-container').removeAttribute('hidden');
+                    document.querySelectorAll('.section-1')[0].style.display = 'table';
+                    document.querySelectorAll('.section-2')[0].style.display = 'table';
+                    document.querySelectorAll('.section-4')[0].style.display = 'table';
+                    document.querySelectorAll('.section-5')[0].style.display = 'table';
+                    document.querySelectorAll('.section-6')[0].style.display = 'table';
+                    this.toggleNavigation();
+                }
             }
         }
     }
@@ -665,7 +793,7 @@
     }
 
     #top-container {
-        position: fixed;
+        position: absolute;
         top: 0;
         z-index: 101;
         width: 100%;
@@ -685,7 +813,7 @@
         z-index: 101;
         overflow: hidden;
         height: 100%;
-        display: flex;
+        display: none;
         justify-content: center;
         padding-top: 50px;
         transition: margin-left 250ms ease-out;
@@ -695,6 +823,7 @@
 
     #mobile-menu[expanded] {
         margin-left: 0px;
+        display: block;
     }
 
     #mobile-menu > ul {
@@ -1072,6 +1201,10 @@
         margin: 15px 0;
     }
 
+    .short-version-text {
+        display: none;
+    }
+
     .section-2 .section__header {
         font-size: 36px;
     }
@@ -1371,6 +1504,46 @@
         justify-content: center;
     }
 
+    .button-more {
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .modal-more {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+    }
+
+    .modal-more__content {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .modal-more__text-area {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        color: #000000;
+    }
+
+    .modal-more__button {
+        color: #000000;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 8px;
+    }
+
     @media only screen and (max-width: 1100px) {
         #top {
             flex-direction: column;
@@ -1448,122 +1621,580 @@
                     #top {
                         padding: 8px 15px;
                     }
+                    
+                    #hamburger[close] > div:nth-child(3) {
+                        top: -8px;
+                    }
                 }
             }
         }
     }
-    @media only screen and (max-width: 1024px) {
-        .section-1 .section__content__text > p {
-            font-size: 15px;
+
+    @media only screen and (max-width: 1199px) {
+        /*1100/550*/
+
+        .section-1 .section__header {
+            font-size: 26px;
         }
 
-        @media only screen and (max-width: 940px) {
-            .section-1 .section__content__text > p {
-                margin: 6px 0;
+        @media only screen and (max-width: 1099px) {
+            /*1000/500*/
+
+            .section-1 .section__header {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+
+            .section-1 .section__content__text {
+                width: 60%;
                 font-size: 14px;
             }
 
-            .section-1 .section__header {
-                margin-bottom: 8px;
-                font-size: 30px;
-            }
-
             .section-2 .section__header {
-                font-size: 31px;
+                font-size: 26px;
             }
 
             .section-3 .section__header {
-                font-size: 28px;
+                font-size: 26px;
+                margin-bottom: 4px;
             }
 
             .section-4 .section__header {
-                font-size: 29px;
+                font-size: 26px;
+            }
+
+            .section-4 .section__slider__content__text {
+                font-size: 18px;
             }
 
             .section-5 .section__header {
-                font-size: 30px;
+                font-size: 26px;
             }
 
             .section-6 .section__header {
-                font-size: 31px;
+                font-size: 26px;
             }
 
-            @media only screen and (max-width: 860px) {
-                .section-1 .section__content__text > p {
-                    font-size: 13px;
+            @media only screen and (max-width: 999px) {
+                /*900/450*/
+
+                .section-1 .section__content__text {
+                    width: 70%;
                 }
 
-                .section-1 .section__header {
-                    font-size: 26px;
-                    margin-bottom: 0;
-                }
-
-                .section-2 .section__header {
-                    font-size: 23px;
-                    margin-bottom: 0;
-                }
-
-                .section-2 .section__content {
-                    font-size: 17px;
-                }
-
-                .section-2 .section__content__text {
-                    flex-direction: column;
-                }
-
-                .section-2 .section__content__element {
-                    margin-bottom: 5px;
-                }
-
-                .section-3 .section__header {
-                    font-size: 22px;
-                    margin-bottom: 0;
-                }
-
-                .section-3 .section__content__element {
-                    width: 26%;
+                .section__image-left {
+                    margin-right: 16px;
                 }
 
                 .section-3 .section__content__element__header {
-                    font-size: 22px;
+                    font-size: 20px;
                 }
 
-                .section-4 .section__slider__content__text {
-                    font-size: 19px;
+                .section-3 .section__content__element {
+                    font-size: 14px;
                 }
 
-                .section-4 .section__slider__content {
-                    width: calc(100% - 70px);
-                    margin: 0 35px;
-                }
+                @media only screen and (max-width: 899px) {
+                    /*800/400*/
 
-                .section-4 .section__slider__content__box {
-                    height: 160px;
-                }
-
-                .section-5 .section__content__box {
-                    flex-direction: column;
-                }
-
-                .section-5 .section__content__box > div:nth-child(1) {
-                    margin-right: 0;
-                }
-
-                .section-5 .section__content__text:nth-child(1) .section__content__element > div:nth-child(2) {
-                    padding-left: 90px;
-                }
-
-                @media only screen and (max-width: 820px) {
-                    .section-4 .section__slider {
-                        width: 90%;
+                    .section-1 .section__content__text > p:not(.short-version-text) {
+                        display: none;
                     }
 
-                    .section-4 .section__slider__content__text {
+                    .short-version-text {
+                        display: block;
+                    }
+
+                    .section-1 .section__header {
+                        font-size: 24px;
+                    }
+
+                    .section-1 .section__content__text {
+                        width: 50%;
+                    }
+
+                    .section-2 .section__content__text {
+                        font-size: 16px;
+                    }
+
+                    .section-2 .section__header {
+                        font-size: 20px;
+                        margin-bottom: 0;
+                    }
+
+                    .section-3 .section__header {
                         font-size: 18px;
                     }
 
-                    .section-6 .section__image-right {
-                        display: none;
+                    .section-3 .section__content__element__header {
+                        font-size: 18px;
+                    }
+
+                    .section-3 .section__content__element {
+                        font-size: 12px;
+                        margin-top: 4px;
+                    }
+
+                    .section-4 .section__header, .section-5 .section__second-header {
+                        font-size: 18px;
+                    }
+
+                    .section-4 .section__slider__content__text {
+                        font-size: 15px;
+                    }
+
+                    .section-5 .section__header {
+                        font-size: 20px;
+                        margin-bottom: 4px;
+                    }
+
+                    .section-5 .section__content__element {
+                        font-size: 13px;
+                    }
+
+                    .section-6 .section__header {
+                        font-size: 20px;
+                        margin-bottom: 16px;
+                    }
+
+                    .section-6 .section__content__element {
+                        font-size: 14px;
+                    }
+
+                    @media only screen and (max-width: 799px) {
+                        /*700/350*/
+
+                        .section-2 .iconflat {
+                            font-size: 20px;
+                        }
+
+                        .section-2 .section__content__text {
+                            padding: 0 16px;
+                        }
+
+                        .section-2 .section__content__element {
+                            margin-bottom: 0;
+                        }
+
+                        .section-3 .section__content__element__header {
+                            font-size: 16px;
+                        }
+
+                        .section-3 .section__content__element p:first-of-type {
+                            display: none;
+                        }
+
+                        .section-4 .section__slider__content {
+                            margin: 0 36px;
+                            width: calc(100% - 72px);
+                        }
+
+                        .section-4 .section__header {
+                            margin-bottom: 0;
+                        }
+
+                        .section-5 .section__content__box > div:nth-child(1) {
+                            margin-right: 12px;
+                        }
+
+                        #fp-nav {
+                            display: none;
+                        }
+
+                        .section-6 .section__header {
+                            font-size: 18px;
+                        }
+
+                        .section-6 .section__content__element {
+                            font-size: 12px;
+                            margin-bottom: 6px;
+                        }
+
+                        .section-6 .message {
+                            height: 58px;
+                        }
+
+                        .section-6 .section__image-right {
+                            margin-left: 24px;
+                        }
+
+                        @media only screen and (max-width: 699px) {
+                            /*600/300*/
+
+                            #mobile-menu > ul > li {
+                                padding: 5px;
+                            }
+
+                            #mobile-menu {
+                                padding-top: 0;
+                            }
+
+                            .section-1 .section__header {
+                                font-size: 16px;
+                            }
+
+                            .section > div {
+                                padding-top: 112px;
+                            }
+
+                            .section-4 .section__slider {
+                                width: 96%;
+                            }
+
+                            .section-5 .section__second-header {
+                                margin-bottom: 0;
+                            }
+
+                            .section-5 i {
+                                display: none;
+                            }
+
+                            .section-6 .section__image-right {
+                                display: none;
+                            }
+
+                            @media only screen and (min-height: 700px) {
+                                /*600/900*/
+
+                                #mobile-menu > ul > li {
+                                    padding: 16px;
+                                }
+
+                                #mobile-menu {
+                                    padding-top: 24;
+                                }
+
+                                .section-1 .section__content {
+                                    flex-direction: column;
+                                }
+
+                                .section__image-left {
+                                    margin: 0 0 32px 0;
+                                    max-height: 40vh;
+                                }
+
+                                .section-1 .section__content__text > p:not(.short-version-text) {
+                                    display: block;
+                                }
+
+                                .short-version-text {
+                                    display: none;
+                                }
+
+                                .section-1 .section__content__text {
+                                    width: 90%;
+                                }
+
+                                .section-2 .section__content__text {
+                                    flex-direction: column;
+                                }
+
+                                .section-3 .section__content__element p:first-of-type {
+                                    display: block;
+                                }
+
+                                .section-3 .section__content {
+                                    flex-direction: column;
+                                    padding: 0 10%;
+                                }
+
+                                .section-3 .section__content__element {
+                                    width: 90%;
+                                }
+
+                                .section-3 .section__header {
+                                    margin-bottom: 32px;
+                                }
+
+                                .section-5 .section__content .flex-center {
+                                    flex-direction: column;
+                                }
+
+                                .section-5 .section__content .flex-center > div {
+                                    width: 100%;
+                                }
+
+                                .section-5 .section__second-header {
+                                    margin-bottom: 32px;
+                                }
+
+                                .section-5 i {
+                                    display: block;
+                                    text-align: center;
+                                    margin: 24px;
+                                }
+
+                                .section-6 .section__image-right {
+                                    display: block;
+                                    margin: 48px 0 0 0;
+                                    max-height: 40vh;
+                                }
+
+                                .section-6 .section__content > .flex-center {
+                                    flex-direction: column;
+                                }
+
+                                .section-6 .section__header {
+                                    margin-bottom: 32px;
+                                }
+                            }
+
+                            @media only screen and (max-width: 599px) {
+                                /*500/300*/
+
+                                #mobile-menu > ul > li {
+                                    padding: 7px;
+                                }
+
+                                .section > div {
+                                    padding-top: 84px;
+                                }
+
+                                .section__image-left {
+                                    display: none;
+                                }
+
+                                .section-1 .section__content__text {
+                                    width: 70%;
+                                }
+
+                                .section-2 .section__header {
+                                    font-size: 16px;
+                                }
+
+                                .section-2 .section__content__element {
+                                    font-size: 13px;
+                                }
+
+                                .section-3 .section__header {
+                                    font-size: 15px;
+                                }
+
+                                .section-3 .section__content__element__header {
+                                    font-size: 13px;
+                                }
+
+                                .section-4 .section__slider__content__text {
+                                    padding: 8px;
+                                    font-size: 13px;
+                                }
+
+                                .section-5 .section__content__element > div:nth-child(2) {
+                                    text-align: right;
+                                }
+
+                                @media only screen and (min-height: 600px) {
+                                    /*500/750*/
+
+                                    #mobile-menu > ul > li {
+                                        padding: 16px;
+                                    }
+
+                                    #mobile-menu {
+                                        padding-top: 24px;
+                                    }
+
+                                    .section__image-left {
+                                        max-height: 25vh;
+                                        display: block;
+                                    }
+                                }
+
+                                @media only screen and (max-width: 499px) {
+                                    /*400/600*/
+
+                                    #mobile-menu > ul > li {
+                                        padding: 16px;
+                                    }
+
+                                    #mobile-menu {
+                                        padding-top: 24px;
+                                    }
+
+                                    .section-1 .section__content {
+                                        flex-direction: column;
+                                    }
+
+                                    .section__image-left {
+                                        max-height: 35vh;
+                                        margin-bottom: 32px;
+                                        display: block;
+                                    }
+
+                                    .section-2 .section__content__text {
+                                        flex-direction: column;
+                                    }
+
+                                    .section-3 .section__content {
+                                        flex-direction: column;
+                                        padding: 0 10%;
+                                    }
+
+                                    .section-3 .section__content__element {
+                                        width: 90%;
+                                    }
+
+                                    .section-3 .section__header {
+                                        margin: 24px;
+                                    }
+
+                                    .section-4 .section__slider__content__box {
+                                        height: 160px;
+                                    }
+
+                                    .section-4 .section__slider__content {
+                                        margin: 0 12px;
+                                        width: calc(100% - 24px);
+                                    }
+
+                                    .section-5 .section__content .flex-center {
+                                        flex-direction: column;
+                                    }
+
+                                    .section-5 .section__content .flex-center > div {
+                                        width: 90%;
+                                    }
+
+                                    .section-5 .section__header {
+                                        margin-bottom: 0px;
+                                        margin: 0 48px;
+                                    }
+
+                                    .section-5 .section__second-header {
+                                        margin-bottom: 0px;
+                                        margin: 0 48px;
+                                    }
+
+                                    .section-5 i {
+                                        display: block;
+                                        text-align: center;
+                                        margin: 24px;
+                                    }
+
+                                    .section-6 .section__image-right {
+                                        display: block;
+                                        margin: 24px 0 0 0;
+                                        max-height: 40vh;
+                                    }
+
+                                    .section-6 .section__content__box{
+                                        padding: 0 24px;
+                                    }
+
+                                    .section-6 .section__content > .flex-center {
+                                        flex-direction: column;
+                                    }
+
+                                    .section-6 .section__header {
+                                        margin-bottom: 32px;
+                                    }
+
+                                    .section-6 .mail, .section-6 .message {
+                                        width: 200px;
+                                    }
+
+                                    @media only screen and (max-width: 399px) {
+                                        /*320/480*/
+
+                                        #mobile-menu {
+                                            padding-top: 0;
+                                        }
+
+                                        #mobile-menu > ul {
+                                            padding: 0;
+                                        }
+
+                                        .section-1 .section__content__text > p:not(.short-version-text) {
+                                            display: none;
+                                        }
+
+                                        .short-version-text {
+                                            display: block;
+                                        }
+
+                                        .section__image-left {
+                                            max-height: 30vh;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        .section-3 .section__content__element {
+                                            margin: 0;
+                                        }
+
+                                        .section-3 .section__content__element {
+                                            width: 100%;
+                                        }
+
+                                        .section-3 .section__header {
+                                            margin: 12px 24px;
+                                        }
+
+                                        .section-4 .section__header {
+                                            font-size: 16px;
+                                        }
+
+                                        .section-4 .section__slider__content__quotes {
+                                            font-size: 48px;
+                                        }
+
+                                        .section-4 .section__slider__button-right, .section-4 .section__slider__button-left {
+                                            transform: scale(0.5);
+                                        }
+
+                                        .section-4 .section__slider {
+                                            width: 100%;
+                                        }
+
+                                        .section-4 .section__slider__content__box {
+                                            height: 170px;
+                                        }
+
+                                        .section-5 i {
+                                            display: none;
+                                        }
+
+                                        .section-5 .section__header {
+                                            font-size: 16px;
+                                        }
+
+                                        .section-5 .section__second-header {
+                                            font-size: 16px;
+                                        }
+
+                                        .section-5 .section__content__box > div:nth-child(1) {
+                                            margin-right: 0;
+                                            margin-top: 12px;
+                                        }
+
+                                        .section-6 .section__image-right {
+                                            display: none;
+                                        }
+
+                                        .section-6 .section__content__box__elements {
+                                            flex-direction: column;
+                                        }
+
+                                        .section-6 .button-div {
+                                            flex-direction: row-reverse;
+                                        }
+
+                                        .section-6 .section__header {
+                                            margin-bottom: 12px;
+                                            font-size: 17px;
+                                        }
+
+                                        .section-6 .message {
+                                            margin-top: 8px;
+                                        }
+
+                                        .section-6 .message, .section-6 .mail {
+                                            width: 280px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
