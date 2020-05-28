@@ -70,7 +70,7 @@
                             0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,
                             9.589"></path>
                             </svg>
-                            Gdańsk
+                            Kalisz
                         </div>
                         <div id="hamburger" v-on:click="toggleMobileMenu()">
                             <div></div>
@@ -121,7 +121,7 @@
                 <div class="section section-1">
                     <div class="section__content">
                         <div>
-                            <img class="section__image section__image-left" src="./assets/zych1.jpg">
+                            <img class="section__image section__image-left" src="./assets/zych.png">
                         </div>
                         <div class="section__content__text">
                             <div class="section__header">Twój sukces to mój sukces!</div>
@@ -129,7 +129,7 @@
                                 Sport i&nbsp;aktywność fizyczna to mój styl życia. Trenując siebie i&nbsp;innych
                                 spełniam
                                 swoje marzenia. Po latach wyrzeczeń i&nbsp;podróży związanych z&nbsp;karierą siatkarską
-                                zamieszkałem na stałe w&nbsp;Gdańsku. Prowadzę treningi personalne wykorzystując wiedzę
+                                zamieszkałem na stałe w&nbsp;Kaliszu. Prowadzę treningi personalne wykorzystując wiedzę
                                 zdobytą podczas studiów na Akademii Wychowania Fizycznego i&nbsp;Sportu w&nbsp;Gdańsku
                                 oraz na Państwowej Wyższej Szkole Zawodowej w&nbsp;Kaliszu uzupełniając ją o&nbsp;szkolenia,
                                 kursy oraz fachową literaturę. Korzystam również z&nbsp;bogatych doświadczeń, które
@@ -149,7 +149,7 @@
                                 Sport i&nbsp;aktywność fizyczna to mój styl życia. Trenując siebie i&nbsp;innych
                                 spełniam
                                 swoje marzenia. Po latach wyrzeczeń i&nbsp;podróży związanych z&nbsp;karierą siatkarską
-                                zamieszkałem na stałe w&nbsp;Gdańsku. Prowadzę treningi personalne wykorzystując wiedzę
+                                zamieszkałem na stałe w&nbsp;Kaliszu. Prowadzę treningi personalne wykorzystując wiedzę
                                 zdobytą podczas...
                                 <span class="button-more" v-on:click="setModal('open')">WIĘCEJ</span>
                                 <div id="modal-1" class="modal-more" hidden>
@@ -159,7 +159,7 @@
                                                 Sport i&nbsp;aktywność fizyczna to mój styl życia. Trenując siebie i&nbsp;innych
                                                 spełniam
                                                 swoje marzenia. Po latach wyrzeczeń i&nbsp;podróży związanych z&nbsp;karierą siatkarską
-                                                zamieszkałem na stałe w&nbsp;Gdańsku. Prowadzę treningi personalne wykorzystując wiedzę
+                                                zamieszkałem na stałe w&nbsp;Kaliszu. Prowadzę treningi personalne wykorzystując wiedzę
                                                 zdobytą podczas studiów na Akademii Wychowania Fizycznego i&nbsp;Sportu w&nbsp;Gdańsku
                                                 oraz na Państwowej Wyższej Szkole Zawodowej w&nbsp;Kaliszu uzupełniając ją o&nbsp;szkolenia,
                                                 kursy oraz fachową literaturę. Korzystam również z&nbsp;bogatych doświadczeń, które
@@ -382,11 +382,11 @@
                                         </div>
                                         <div class="section__content__element">
                                             <div>5 treningów personalnych</div>
-                                            <div>399,00 zł</div>
+                                            <div>449,00 zł</div>
                                         </div>
                                         <div class="section__content__element">
                                             <div>10 treningów personalnych</div>
-                                            <div>699,00 zł</div>
+                                            <div>799,00 zł</div>
                                         </div>
                                     </div>
                                 </div>
@@ -435,7 +435,7 @@
                                             <svg class="svg-icon" viewBox="0 0 20 20">
                                                 <path d="M17.659,3.681H8.468c-0.211,0-0.383,0.172-0.383,0.383v2.681H2.341c-0.21,0-0.383,0.172-0.383,0.383v6.126c0,0.211,0.172,0.383,0.383,0.383h1.532v2.298c0,0.566,0.554,0.368,0.653,0.27l2.569-2.567h4.437c0.21,0,0.383-0.172,0.383-0.383v-2.681h1.013l2.546,2.567c0.242,0.249,0.652,0.065,0.652-0.27v-2.298h1.533c0.211,0,0.383-0.172,0.383-0.382V4.063C18.042,3.853,17.87,3.681,17.659,3.681 M11.148,12.87H6.937c-0.102,0-0.199,0.04-0.27,0.113l-2.028,2.025v-1.756c0-0.211-0.172-0.383-0.383-0.383H2.724V7.51h5.361v2.68c0,0.21,0.172,0.382,0.383,0.382h2.68V12.87z M17.276,9.807h-1.533c-0.211,0-0.383,0.172-0.383,0.383v1.755L13.356,9.92c-0.07-0.073-0.169-0.113-0.27-0.113H8.851v-5.36h8.425V9.807z"></path>
                                             </svg>
-                                            <div>+48 515 123 834</div>
+                                            <div>+48 790 333 144</div>
                                         </div>
                                         <div class="section__content__element">
                                             <svg class="svg-icon" viewBox="0 0 20 20">
@@ -447,7 +447,7 @@
                                             <svg class="svg-icon" viewBox="0 0 20 20">
                                                 <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
                                             </svg>
-                                            <div>kontakt@pawelzych.pl</div>
+                                            <div>trenerpawelzych@gmail.com</div>
                                         </div>
                                     </div>
                                     <div>
@@ -1481,6 +1481,7 @@
 
     .section__image-left {
         margin-right: 48px;
+        border-radius: 16px;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -1690,6 +1691,8 @@
 
                 .section__image-left {
                     margin-right: 16px;
+                    margin-left: 16px;
+                    max-width: 50vw;
                 }
 
                 .section-3 .section__content__element__header {
@@ -1877,6 +1880,7 @@
                                 .section__image-left {
                                     margin: 0 0 32px 0;
                                     max-height: 40vh;
+                                    max-width: 80vw;
                                 }
 
                                 .section-1 .section__content__text > p:not(.short-version-text) {
@@ -1957,7 +1961,7 @@
                                 }
 
                                 .section__image-left {
-                                    display: none;
+                                    max-width: 80vw;
                                 }
 
                                 .section-1 .section__content__text {
